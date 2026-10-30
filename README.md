@@ -34,9 +34,14 @@ Layout:
 
 ## Publishing a Release
 
-1. Bump `version` in `package.json` and `placard.module.json`
-2. `pnpm build`
-3. Create a GitHub Release and attach `dist/places.pick-<version>.placard-module` (preferred) or the `.zip`
+1. Bump `version` in **both** `package.json` and `placard.module.json` (must match)
+2. Commit and push to `main`
+3. Tag and push: `git tag v0.1.1 && git push origin v0.1.1`
+4. GitHub Actions **Release** builds the plugin and publishes a GitHub Release with:
+   - `places.pick-<version>.placard-module` (preferred for Placard “Install from GitHub”)
+   - `places.pick-<version>.zip`
+
+CI on `main` / PRs runs typecheck + build.
 
 ## Notes
 
