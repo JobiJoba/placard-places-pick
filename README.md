@@ -1,0 +1,44 @@
+# places.pick — Placard Pick module
+
+Standalone [Placard](https://github.com/JobiJoba/Placard) Marketplace plugin. Spins one place from your library (any category, open tonight, near you, avoid recent).
+
+## Install on a Placard instance
+
+**From GitHub (recommended once you publish a Release):**
+
+1. Settings → Module marketplace → **Install from GitHub**
+2. Paste this repo URL (or `owner/repo`)
+3. Placard installs the latest Release asset (`.placard-module` or `.zip`)
+
+**From a local zip:**
+
+1. `pnpm install && pnpm build`
+2. Upload `dist/places.pick-0.1.1.zip` (or `.placard-module`) in Settings → Module marketplace
+
+Then enable the module and show it in nav.
+
+## Develop
+
+```bash
+pnpm install
+pnpm build      # → pack/ + dist/*.zip + dist/*.placard-module
+pnpm typecheck
+```
+
+Layout:
+
+- `placard.module.json` — manifest
+- `src/server` — `createModule()` HTTP + MCP
+- `src/web` — `PickPage` (uses host React bridge shims)
+- `scripts/build.mjs` — esbuild + zip
+
+## Publishing a Release
+
+1. Bump `version` in `package.json` and `placard.module.json`
+2. `pnpm build`
+3. Create a GitHub Release and attach `dist/places.pick-<version>.placard-module` (preferred) or the `.zip`
+
+## Notes
+
+- Does **not** depend on the Placard monorepo. Host contracts are vendored in `src/placard-sdk.ts` (sdk major `0`).
+- Web UI must not ship React — shims alias to `globalThis.__PLACARD_PLUGIN__`.

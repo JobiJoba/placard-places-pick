@@ -1,0 +1,21 @@
+{
+  "name": "placard-places-pick",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Placard Marketplace module — spin one place from your library",
+  "type": "module",
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "build:zip": "node ./scripts/build.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.2.0",
+    "esbuild": "^0.28.2",
+    "fflate": "^0.8.3",
+    "react": "^19.2.0",
+    "react-router": "^7.9.0",
+    "typescript": "6.0.3"
+  }
+}

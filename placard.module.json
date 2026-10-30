@@ -1,0 +1,42 @@
+{
+  "id": "places.pick",
+  "name": "Pick",
+  "version": "0.1.1",
+  "description": "Spin one place from your library — any category, open now, near you, or surprise me.",
+  "permissions": ["places.read", "search.query"],
+  "nav": [
+    {
+      "path": "/m/places.pick",
+      "label": "Pick",
+      "slot": "primary"
+    }
+  ],
+  "source": "upload",
+  "packageName": "placard-places-pick",
+  "sdkVersion": "0.1.0",
+  "serverEntry": "./server/index.js",
+  "webEntry": "./web/index.js",
+  "icon": "./web/assets/cover.svg",
+  "cover": "./web/assets/cover.svg",
+  "webRoutes": [
+    {
+      "path": "/m/places.pick",
+      "exportName": "PickPage"
+    }
+  ],
+  "actions": [
+    {
+      "id": "open",
+      "label": "Pick a place",
+      "keywords": "spin wheel random surprise",
+      "path": "/m/places.pick"
+    }
+  ],
+  "mcpTools": [
+    {
+      "name": "pick_place",
+      "title": "Pick a place",
+      "description": "Pick one place from your library (any category, open now/tonight, list/tag/radius, optional avoid-recent). Same rules as the Pick wheel."
+    }
+  ]
+}

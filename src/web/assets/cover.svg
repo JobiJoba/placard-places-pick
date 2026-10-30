@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-label="Pick">
+  <defs>
+    <linearGradient id="g" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1612"/>
+      <stop offset="45%" stop-color="#3d342c"/>
+      <stop offset="100%" stop-color="#c4a574"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <rect x="250" y="96" width="140" height="140" rx="12" fill="none" stroke="#f2ebe0" stroke-width="5"/>
+  <path d="M290 166h60M320 136v60" stroke="#c4a574" stroke-width="6" stroke-linecap="round"/>
+  <text x="320" y="300" text-anchor="middle" fill="#f2ebe0" font-family="Barlow Condensed, sans-serif" font-size="42" font-weight="600" letter-spacing="0.12em">PICK</text>
+</svg>
