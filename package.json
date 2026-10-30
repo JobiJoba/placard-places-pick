@@ -3,6 +3,10 @@
   "version": "0.1.1",
   "private": true,
   "description": "Placard Marketplace module — spin one place from your library",
+  "packageManager": "pnpm@12.4.1",
+  "engines": {
+    "node": ">=24"
+  },
   "type": "module",
   "scripts": {
     "build": "node ./scripts/build.mjs",
