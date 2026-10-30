@@ -1,0 +1,6 @@
+# Single-package repo; required by pnpm 12 for allowBuilds.
+packages:
+  - "."
+
+allowBuilds:
+  esbuild: true
